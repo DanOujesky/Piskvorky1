@@ -20,7 +20,7 @@ public class GamePanel extends JPanel implements ActionListener {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 buttons[i][j] = new JButton("");
-                buttons[i][j].setFont(new Font("Arial", Font.BOLD, 50));
+                buttons[i][j].setFont(new Font("Arial", Font.BOLD, 100));
                 buttons[i][j].addActionListener(this);
                 add(buttons[i][j]);
             }
