@@ -32,9 +32,11 @@ public class GamePanel extends JPanel implements ActionListener {
 
         if (clickedButton.getText().equals("")) {
             if (currentPlayer == 1) {
+                currentPlayer = 0;
                 clickedButton.setText("X");
             } else {
                 clickedButton.setText("O");
+                currentPlayer = 1;
             }
         }
     }
