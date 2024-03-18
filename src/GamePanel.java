@@ -27,6 +27,25 @@ public class GamePanel extends JPanel implements ActionListener {
         }
 
     }
+    public void checkWinner(String text){
+
+        for (int i = 0; i < 3; i++) {
+            int soucet = 0;
+            for (int j = 0; j < 3; j++) {
+                if (buttons[i][j].getText().equals(text)) {
+                    soucet++;
+                    System.out.println("CHANGE");
+                }
+                if (soucet > 2) {
+                    System.out.println("WINNER");
+                }
+            }
+        }
+
+    }
+
+
+
     public void actionPerformed(ActionEvent e) {
         JButton clickedButton = (JButton) e.getSource();
 
@@ -34,8 +53,10 @@ public class GamePanel extends JPanel implements ActionListener {
             if (currentPlayer == 1) {
                 currentPlayer = 0;
                 clickedButton.setText("X");
+                checkWinner("X");
             } else {
                 clickedButton.setText("O");
+                checkWinner("0");
                 currentPlayer = 1;
             }
         }
