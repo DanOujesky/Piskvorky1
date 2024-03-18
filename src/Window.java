@@ -9,6 +9,7 @@ public class Window extends JFrame {
         window.setResizable(false);
 
         GamePanel gamePanel = new GamePanel();
+        JOptionPane.showMessageDialog(null, "First player start with O","Message", JOptionPane.INFORMATION_MESSAGE);
         window.add(gamePanel);
         window.pack();
 
